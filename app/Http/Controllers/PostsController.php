@@ -27,14 +27,14 @@ public function more(Request $request) {
   }
 
   public function ai() {
-      $posts = Post::where('body', '=', 'icon-ai.svg')
+      $posts = Post::where('title', '=', 'Illustrator freebies')
                    ->take(4)
                    ->get();
       return view('posts._ai', compact('posts'));
   }
 
   public function psd() {
-      $posts = Post::whereIn('category_id', [3])
+      $posts = Post::where('title', '=', 'PSD Goodies')
                    ->orderBy('created_at', 'desc')
                    ->take(2)
                    ->get();
@@ -43,7 +43,7 @@ public function more(Request $request) {
   }
 
   public function theme() {
-      $posts = Post::whereIn('id', [1, 9, 13, 6, 17])
+      $posts = Post::where('title', '=', 'Wordpress theme')
                    ->orderBy('id', 'asc')
                    ->take(5)
                    ->get();
