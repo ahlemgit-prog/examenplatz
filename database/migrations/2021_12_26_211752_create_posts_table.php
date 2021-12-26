@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreatePostsTable extends Migration
 {
@@ -12,7 +13,6 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        // Create table for storing roles
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('author_id');
@@ -22,14 +22,12 @@ class CreatePostsTable extends Migration
             $table->text('excerpt');
             $table->text('body');
             $table->string('image')->nullable();
-            $table->string('slug')->unique();
+            $table->string('slug')->unique('posts_slug_unique');
             $table->text('meta_description');
             $table->text('meta_keywords');
-            $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
+            $table->enum('status', ['published', 'draft', 'pending'])->default('DRAFT');
             $table->boolean('featured')->default(0);
             $table->timestamps();
-
-            //$table->foreign('author_id')->references('id')->on('users');
         });
     }
 
@@ -40,6 +38,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        Schema::dropIfExists('posts');
     }
 }
