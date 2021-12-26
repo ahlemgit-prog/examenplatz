@@ -34,9 +34,9 @@ public function more(Request $request) {
   }
 
   public function psd() {
-      $posts = Post::whereIn('id', [3, 4, 7, 11, 15, 52, 55])
+      $posts = Post::whereIn('category_id', [3])
                    ->orderBy('created_at', 'desc')
-                   ->take(7)
+                   ->take(1)
                    ->get();
 
       return view('posts._psd', compact('posts'));
