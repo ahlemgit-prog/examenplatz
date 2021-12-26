@@ -36,7 +36,7 @@ public function more(Request $request) {
   public function psd() {
       $posts = Post::whereIn('category_id', [3])
                    ->orderBy('created_at', 'desc')
-                   ->take(1)
+                   ->take(2)
                    ->get();
 
       return view('posts._psd', compact('posts'));
