@@ -1,6 +1,6 @@
 <div class="wrapper-text-description">
     <div class="wrapper-file">
-        <div class="icon-file"><img src="{{ asset('/assets/img/' .$post->content) }}" alt="" width="21" height="21"/></div>
+        <div class="icon-file"><img src="{{ asset('/assets/img/' .$post->body) }}" alt="" width="21" height="21"/></div>
           <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
@@ -16,7 +16,7 @@
 
     <div class="wrapper-download">
       <div class="icon-download"><img src="{{ asset('/assets/img/icon-download.svg') }}" alt="" width="19" height="26"/></div>
-        <div class="text-download"><a href="{{ asset('/assets/download/' .$categorie->image) }}" Download><b>Download</b></a></div>
+        <div class="text-download"><a href="{{ asset('/assets/download/' .$post->meta_keywords) }}" Download><b>Download</b></a></div>
     </div>
 
     <div class="wrapper-morefrom">
