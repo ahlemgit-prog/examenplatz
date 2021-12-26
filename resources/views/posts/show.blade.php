@@ -13,8 +13,8 @@
     <div id="main-container-image">
 
               <div class="title-item">
-                <div class="title-icon"><img src="{{ asset('/assets/img/' . $post->content) }}" alt="" width="68px" height="68px"></div>
-                  <div class="title-text">{{ $post->title_text }}</div>
+                <div class="title-icon"><img src="{{ asset('/assets/img/' . $post->body) }}" alt="" width="68px" height="68px"></div>
+                  <div class="title-text">{{ $post->seo_title}}</div>
                   <div class="title-text-2">{{ $post->created_at->format('M d, Y') }} by
                     {{-- Author du post --}}
                       @include('authors._show', ['author' => $post->author])
@@ -24,7 +24,7 @@
 
       <div class="work">
         <figure class="white">
-             <img src="{{ asset('/assets/img/' . $post->image_text) }}" alt=""/>
+             <img src="{{ asset('/assets/img/' . $post->image) }}" alt=""/>
         </figure>
 
         {{-- Aside du post --}}

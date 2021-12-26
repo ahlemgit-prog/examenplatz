@@ -6,12 +6,12 @@
 
     <div class="wrapper-weight">
       <div class="icon-weight"><img src="{{ asset('/assets/img/icon-weight.svg') }}" alt="" width="20" height="23"/></div>
-        <div class="text-weight">{{ $categorie->size }} Mo</div>
+        <div class="text-weight">50 Mo</div>
     </div>
 
     <div class="wrapper-desc">
       <div class="icon-desc"><img src="{{ asset('/assets/img/icon-desc.svg') }}" alt="" width="24" height="24"/></div>
-        <div class="text-desc">{{ $post->resume }} </div>
+        <div class="text-desc">{{ $post->excerpt }} </div>
     </div>
 
     <div class="wrapper-download">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="wrapper-morefrom">
-      <div class="text-morefrom">More from .{{ $categorie->type }}</div>
+      <div class="text-morefrom">More from .{{ $categorie->slug }}</div>
         <div class="image-morefrom">
           <a href="{{ route('posts._psd') }}"><div class="image-morefrom-1"><img src="{{ asset('/assets/img/psd-1.jpg') }}" alt="" width="430" height="330"/></div></a>
             <a href="{{ route('posts._psd') }}"><div class="image-morefrom-2"><img src="{{ asset('/assets/img/psd-2.jpg') }}" alt="" width="430" height="330"/></div></a>

@@ -1,1 +1,2 @@
 
+{{ $author->lastname }} {{ $author-> firstname }}
