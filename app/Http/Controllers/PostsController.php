@@ -27,7 +27,7 @@ public function more(Request $request) {
   }
 
   public function ai() {
-      $posts = Post::where('content', '=', 'icon-ai.svg')
+      $posts = Post::where('body', '=', 'icon-ai.svg')
                    ->take(4)
                    ->get();
       return view('posts._ai', compact('posts'));
