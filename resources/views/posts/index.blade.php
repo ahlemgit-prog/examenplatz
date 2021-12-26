@@ -1,0 +1,50 @@
+@extends('template.index')
+
+@section('title')
+    Free Grid Wordpress Theme
+@endsection
+
+@section('content')
+<div id="wrapper-container">
+  <div class="container object">
+    <div id="main-container-image">
+      <div id="list">
+        @include('posts._list', ['posts' => $posts])
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MORE POSTS +++ -->
+
+<div id="wrapper-oldnew">
+  <div class="oldnew">
+    <div  class="wrapper-oldnew-more">
+      <ul>
+        <li>
+          <a href="#" id="more-posts" data-url="{{ route('ajax.posts.more') }}">
+            <img id="oldnew-more" src="{{ asset('/assets/img/more.png') }}" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('scripts')
+
+    <script type="text/javascript">
+
+    let offset = 0;
+    $('#more-posts').click(function(e) {
+      e.preventDefault();
+      $.get($(this).data('url'), {offset: offset})
+       .done(function(rep) {
+         $('#list').append(rep)
+                   .find('div:nth-last-of-type(-n+10)');
+          offset = offset + 0;
+       });
+    });
+    </script>
+
+@endsection
