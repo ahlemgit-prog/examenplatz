@@ -34,9 +34,9 @@ public function more(Request $request) {
   }
 
   public function psd() {
-      $posts = Post::where('PSD Goodies', 'PSD mockup')
+      $posts = Post::where('title', '=', 'PSD Goodies')
                    ->orderBy('created_at', 'desc')
-                   ->take(3)
+                   ->take(2)
                    ->get();
 
       return view('posts._psd', compact('posts'));
