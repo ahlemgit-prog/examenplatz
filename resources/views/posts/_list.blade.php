@@ -13,7 +13,7 @@
           </dl>
         </a>
           <div id="wrapper-part-info">
-            <div class="part-info-image"><img src="{{ asset('assets/img/' . $post->body) }}" alt=""></div>
+            <div class="part-info-image"><img src="{{ asset('assets/img/' . $post->meta_description) }}" alt=""></div>
             <div id="part-info">{{ $post->title }}</div>
           </div>
     </figure>
