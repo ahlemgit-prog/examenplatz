@@ -13,7 +13,7 @@
     <div id="main-container-image">
 
               <div class="title-item">
-                <div class="title-icon"><img src="{{ asset('/assets/img/' . $post->body) }}" alt="" width="68px" height="68px"></div>
+                <div class="title-icon"><img src="{{ asset('/assets/img/' . $post->meta_description) }}" alt="" width="68px" height="68px"></div>
                   <div class="title-text">{{ $post->seo_title}}</div>
                   <div class="title-text-2">{{ $post->created_at->format('M d, Y') }} by
                     {{-- Author du post --}}
