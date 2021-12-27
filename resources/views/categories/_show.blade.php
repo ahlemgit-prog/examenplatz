@@ -25,7 +25,7 @@
           <a href="{{ route('posts._psd') }}"><div class="image-morefrom-1"><img src="{{asset('/assets/img/psd-1.jpg')}}" alt="" width="430" height="330"/></div></a>
             <a href="{{ route('posts._psd') }}"><div class="image-morefrom-2"><img src="{{asset('/assets/img/psd-2.jpg')}}" alt="" width="430" height="330"/></div></a>
             <a href="{{ route('posts._psd') }}"><div class="image-morefrom-3"><img src="{{asset('/assets/img/psd-3.jpg')}}" alt="" width="430" height="330"/></div></a>
-            <a href="{{ route('posts._psd') }}"><div class="image-morefrom-4"><img src="{{asset('/assets/img/psd-6.jpg')}}" alt="" width="430" height="330"/></div></a>
+            <a href="{{ route('posts._psd') }}"><div class="image-morefrom-4"><img src="{{asset('/assets/img/psd-5.jpg')}}" alt="" width="430" height="330"/></div></a>
         </div>
     </div>
 </div>
