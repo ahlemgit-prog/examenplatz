@@ -24,7 +24,7 @@
 
       <div class="work">
         <figure class="white">
-             <img src="{{asset('storage/app/public/' . $post->image)}}" alt=""/>
+             <img src="{{asset('app/public/' . $post->image)}}" alt=""/>
         </figure>
 
         {{-- Aside du post --}}
