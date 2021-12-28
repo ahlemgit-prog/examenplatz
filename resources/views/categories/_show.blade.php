@@ -16,7 +16,7 @@
 
     <div class="wrapper-download">
       <div class="icon-download"><img src="{{asset('/assets/img/icon-download.svg')}}" alt="" width="19" height="26"/></div>
-        <div class="text-download"><a href="{{asset('storage/posts' .$post->meta_keywords)}}" Download><b>Download</b></a></div>
+        <div class="text-download"><a href="{{asset('storage/posts/' .$post->meta_keywords)}}" Download><b>Download</b></a></div>
     </div>
 
     <div class="wrapper-morefrom">
@@ -27,7 +27,7 @@
                 'slug' => \Illuminate\Support\Str::slug($post->title)
               ]) }}">
               <div class="image-morefrom-1">
-                <img src="{{asset('storage/' . $post->image)}}" alt="" width="430" height="330"/>
+                <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
               </div>
             </a>
             <a href="{{ route('posts.show', [
