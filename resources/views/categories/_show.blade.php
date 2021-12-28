@@ -16,7 +16,10 @@
 
     <div class="wrapper-download">
       <div class="icon-download"><img src="{{asset('/assets/img/icon-download.svg')}}" alt="" width="19" height="26"/></div>
-        <div class="text-download"><a href="{{asset('storage/posts/' .$post->meta_keywords)}}" download><b>Download</b></a></div>
+        <div class="text-download"><a href="{{asset('storage/posts/' .$post->meta_keywords)}}" download>
+          <b>Download</b>
+          <img src="{{asset('storage/posts/' .$post->meta_keywords)}}" alt="{{$post->meta_keywords}}">
+        </a></div>
     </div>
 
     <div class="wrapper-morefrom">
