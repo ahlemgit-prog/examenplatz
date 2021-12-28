@@ -24,7 +24,7 @@
 
       <div class="work">
         <figure class="white">
-             <img src="{{asset('storage/posts' . $post->meta_keywords)}}" alt=""/>
+             <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt=""/>
         </figure>
 
         {{-- Aside du post --}}
