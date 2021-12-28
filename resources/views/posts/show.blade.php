@@ -23,8 +23,8 @@
               </div>
 
       <div class="work">
-        <figure class="white">
-             <img src="{{asset('storage/' . $post->body)}}" alt=""/>
+        <figure class="white">    
+             {{ $post->body }}
         </figure>
 
         {{-- Aside du post --}}

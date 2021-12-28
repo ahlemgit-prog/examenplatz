@@ -6,7 +6,9 @@
               'post' => $post->id,
               'slug' => \Illuminate\Support\Str::slug($post->title)
             ]) }}">
-          <img src="{{asset('storage/' . $post->body)}}" alt="" />
+
+            {{ $post->body }}
+
           <dl>
             <dt>{{ $post->title }}</dt>
             <dd>{{ $post->excerpt }}</dd>
