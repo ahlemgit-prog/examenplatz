@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://examenplatz.herokuapp.com/storage'),
+    'url' => env('APP_URL', 'https://examenplatz.herokuapp.com/public'),
 
     'asset_url' => env('ASSET_URL', null),
 
