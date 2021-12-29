@@ -4,7 +4,7 @@
 			<div id="wrapper-sorting">
 				{{-- Pages du post ——}}
 				@include('pages._index', [
-				'categories' => \App\Models\Page::orderBy('id', 'ASC')->get()
+				'pages' => \App\Models\Page::orderBy('id', 'ASC')->get()
 				])
 			</div>
 			<div id="wrapper-bouton-icon">
