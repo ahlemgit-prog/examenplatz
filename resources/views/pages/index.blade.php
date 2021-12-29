@@ -1,5 +1,5 @@
 <div id="wrapper-title-1">
-  <div class="top-rated object">Top-rated</div>
+  <a href="{{ route('homepage') }}"><div class="top-rated object">Top-rated</div></a>
     <div id="fleche-nav-1"></div>
 </div>
 
