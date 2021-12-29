@@ -1,2 +1,1 @@
-
-  {{ $tag->name }}
+{{ $tag->name }}
