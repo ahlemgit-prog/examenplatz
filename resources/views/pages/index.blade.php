@@ -4,7 +4,7 @@
 </div>
 
 <div id="wrapper-title-2">
-  <a href="#"><div class="recent object">Recent</div></a>
+  <a href="{{ route('pages._recent') }}"><div class="recent object">Recent</div></a>
       <div id="fleche-nav-2"></div>
 </div>
 

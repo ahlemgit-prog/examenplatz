@@ -28,6 +28,9 @@ Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
 Route::get('/pages', [\App\Http\Controllers\PagesController::class, 'index'])
      ->name('pages.index');
 
+Route::get('/pages/recent', [\App\Http\Controllers\PagesController::class, 'recent'])
+    ->name('pages._recent');
+
 // Route des posts
 
 Route::get('/posts', [\App\Http\Controllers\PostsController::class, 'index'])
