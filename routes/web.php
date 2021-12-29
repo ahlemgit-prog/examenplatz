@@ -24,6 +24,10 @@ Route::get('/posts', function () {
 Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
      ->name('homepage');
 
+// Route des pages
+Route::get('/pages', [\App\Http\Controllers\PagesController::class, 'index'])
+     ->name('pages._index');
+
 // Route des posts
 
 Route::get('/posts', [\App\Http\Controllers\PostsController::class, 'index'])
@@ -63,7 +67,7 @@ Route::get('/posts/photo', [\App\Http\Controllers\PostsController::class, 'photo
 
 Route::get('/posts/premium', [\App\Http\Controllers\PostsController::class, 'premium'])
     ->name('posts._premium');
-    
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
