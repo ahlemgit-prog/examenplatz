@@ -11,9 +11,9 @@
 
     <div id="main-container-image">
 
-          
+          @include('posts._list', ['posts' => $posts])
 
-      </div>
     </div>
+  </div>
 </div>
 @endsection
