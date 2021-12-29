@@ -77,4 +77,10 @@ public function more(Request $request) {
 
       return view('posts._premium', compact('posts'));
   }
+
+  public function recent() {
+      $posts = Post::orderBy('created_at', 'asc')
+                   ->get();
+      return view('posts._recent', compact('posts'));
+  }
 }
