@@ -14,7 +14,7 @@ class Page extends Model
     }
 
     public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->belongsToMany(Page::class, 'posts_has_pages');
     }
 
 }
