@@ -30,8 +30,6 @@
         {{-- Aside du post --}}
         @include('categories._show', ['categorie' => $post->categorie])
 
-        @include('tags._show') 
-
         {{-- Comments du post --}}
         @include('comments._index', ['comments' => $post->comments])
 
