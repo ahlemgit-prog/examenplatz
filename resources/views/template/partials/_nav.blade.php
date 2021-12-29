@@ -3,9 +3,7 @@
 		<div class="navbar object">
 			<div id="wrapper-sorting">
 				{{-- Pages du post ——}}
-				@include('pages._index', [
-				'pages' => \App\Models\Page::orderBy('id', 'ASC')->get()
-				])
+				@include('pages._index')
 			</div>
 			<div id="wrapper-bouton-icon">
 				{{-- Categories du post --}}
