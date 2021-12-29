@@ -6,7 +6,7 @@
 
     <div class="wrapper-weight">
       <div class="icon-weight"><img src="{{asset('/assets/img/icon-weight.svg')}}" alt="" width="20" height="23"/></div>
-        <div class="text-weight">60 Mo</div>
+        <div class="text-weight">{{ $post->size }} Mo</div>
     </div>
 
     <div class="wrapper-desc">
