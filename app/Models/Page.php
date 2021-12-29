@@ -13,8 +13,8 @@ class Page extends Model
         return $this->belongsTo(Author::class);
     }
 
-    public function post() {
-        return $this->belongsTo(Post::class);
+    public function posts() {
+        return $this->hasMany(Post::class);
     }
 
 }
