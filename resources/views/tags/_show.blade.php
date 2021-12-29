@@ -1,1 +1,1 @@
-{{ $tags->name }}
+{{ $tag->name }}
