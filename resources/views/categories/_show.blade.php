@@ -4,11 +4,6 @@
           <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
-    <div class="wrapper-file">
-        <div class="icon-file"><img src="{{asset('/assets/img/' .$post->meta_description)}}" alt="" width="21" height="21"/></div>
-          <div class="text-file">@include('tags._show')</div>
-    </div>
-
     <div class="wrapper-weight">
       <div class="icon-weight"><img src="{{asset('/assets/img/icon-weight.svg')}}" alt="" width="20" height="23"/></div>
         <div class="text-weight">60 Mo</div>
