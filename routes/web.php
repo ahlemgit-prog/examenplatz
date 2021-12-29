@@ -42,6 +42,9 @@ Route::get('/ajax/posts', [\App\Http\Controllers\PostsController::class, 'more']
 Route::get('/posts/recent', [\App\Http\Controllers\PostsController::class, 'recent'])
     ->name('posts._recent');
 
+Route::get('/posts/oldies', [\App\Http\Controllers\PostsController::class, 'oldies'])
+    ->name('posts._oldies');
+
 // Route des commentaires
 
 Route::get('/ajax/comments/add', [\App\Http\Controllers\CommentsController::class, 'add'])

@@ -79,6 +79,12 @@ public function more(Request $request) {
   }
 
   public function recent() {
+      $posts = Post::orderBy('created_at', 'desc')
+                   ->get();
+      return view('posts._recent', compact('posts'));
+  }
+
+  public function oldies() {
       $posts = Post::orderBy('created_at', 'asc')
                    ->get();
       return view('posts._recent', compact('posts'));
