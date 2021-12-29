@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('title')
-    Free Grid Wordpress Theme
+    Free Grid Photoshop
 @endsection
 
 @section('content')

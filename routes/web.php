@@ -26,7 +26,7 @@ Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
 
 // Route des pages
 Route::get('/pages', [\App\Http\Controllers\PagesController::class, 'index'])
-     ->name('pages._index');
+     ->name('pages.index');
 
 // Route des posts
 

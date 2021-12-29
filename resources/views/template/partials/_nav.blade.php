@@ -2,7 +2,7 @@
 <div id="wrapper-navbar">
 		<div class="navbar object">
 			<div id="wrapper-sorting">
-				@include('pages._index')
+				@include('pages.index')
 			</div>
 			<div id="wrapper-bouton-icon">
 				{{-- Categories du post --}}

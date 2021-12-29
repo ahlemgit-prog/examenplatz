@@ -8,6 +8,6 @@ use App\Models\Page;
 class PagesController extends Controller
 {
     public function index(Page $page) {
-      return view('pages._index', compact('page'));
+      return view('pages.index', compact('page'));
     }
 }
