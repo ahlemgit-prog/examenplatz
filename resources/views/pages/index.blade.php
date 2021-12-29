@@ -9,6 +9,6 @@
 </div>
 
 <div id="wrapper-title-3">
-  <a href="{{ route('posts._oldies') }}"><div class="oldies object">Oldies</div></a>
+  <a href="#"><div class="oldies object">Oldies</div></a>
       <div id="fleche-nav-3"></div>
 </div>
