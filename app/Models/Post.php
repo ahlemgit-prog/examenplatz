@@ -24,4 +24,8 @@ class Post extends Model
     public function categorie() {
         return $this->belongsTo(Categorie::class, 'category_id');
     }
+
+    public function pages() {
+        return $this->hasMany(Page::class);
+    }
 }
