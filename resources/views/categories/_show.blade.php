@@ -6,7 +6,7 @@
 
     <div class="wrapper-file">
         <div class="icon-file"><img src="{{asset('/assets/img/' .$post->meta_description)}}" alt="" width="21" height="21"/></div>
-          <div class="text-file">{{ $post->$posts->tags }}</div>
+          <div class="text-file">{{ $posts->tags }}</div>
     </div>
 
     <div class="wrapper-weight">
