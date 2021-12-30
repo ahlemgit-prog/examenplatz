@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('title')
-    Free Grid Recent
+    Free Grid Oldies
 @endsection
 
 @section('content')
