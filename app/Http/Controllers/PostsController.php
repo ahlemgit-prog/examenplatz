@@ -27,34 +27,31 @@ public function more(Request $request) {
   }
 
   public function ai() {
-      $posts = Post::where('title', '=', 'Illustrator freebies')
-                   ->take(4)
+      $posts = Post::whereIn('id', [24, 14, 9])
+                   ->orderBy('id', 'asc')
                    ->get();
       return view('posts._ai', compact('posts'));
   }
 
   public function psd() {
-      $posts = Post::where('title', '=', 'PSD Goodies')
-                   ->orderBy('created_at', 'desc')
-                   ->take(2)
+      $posts = Post::whereIn('id', [23, 16, 15, 11, 17, 8, 7])
+                   ->orderBy('id', 'asc')
                    ->get();
 
       return view('posts._psd', compact('posts'));
   }
 
   public function theme() {
-      $posts = Post::where('title', '=', 'Wordpress theme')
+      $posts = Post::whereIn('id', [22, 18, 13, 10, 6])
                    ->orderBy('id', 'asc')
-                   ->take(5)
                    ->get();
 
       return view('posts._theme', compact('posts'));
   }
 
   public function font() {
-      $posts = Post::where('title', '=', 'Free font' )
+      $posts = Post::whereIn('id', [21, 19, 12, 4])
                    ->orderBy('id', 'asc')
-                   ->take(3)
                    ->get();
 
       return view('posts._font', compact('posts'));
