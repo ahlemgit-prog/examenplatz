@@ -11,7 +11,8 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "tcg/voyager": "^1.5"
+        "tcg/voyager": "^1.5",
+        "ext-gd" : "*"
     },
     "require-dev": {
         "bennett-treptow/laravel-migration-generator": "^4.1",
@@ -20,8 +21,7 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10",
-        "ext-gd" : "*"
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
