@@ -1,11 +1,27 @@
 <!-- Categories du nav -->
+
+@foreach($categories as $categorie)
+  <div id="bouton-ai">
+    <ul>
+      <li>
+        <a href="{{ route('categories.show', ['categorie' => $categorie->id, 'slug' => Illuminate\Support\Str::slug($categorie->name)]) }}">
+          <img src=" {{ asset('/assets/img/icon-ai.svg') }}" alt="illustrator" title="Illustrator" height="28" width="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+@endforeach
+
 <div id="bouton-ai">
   <ul>
     <li>
-      <a href="{{ route('posts._ai') }}"><img src=" {{ asset('/assets/img/icon-ai.svg') }}" alt="illustrator" title="Illustrator" height="28" width="28"></a>
+      <a href="{{ route('posts._ai') }}">
+        <img src=" {{ asset('/assets/img/icon-ai.svg') }}" alt="illustrator" title="Illustrator" height="28" width="28">
+      </a>
     </li>
   </ul>
 </div>
+
 <div id="bouton-psd">
   <ul>
     <li>
