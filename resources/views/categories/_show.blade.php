@@ -4,7 +4,7 @@
           <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
-    <div class="wrapper-weight">
+    <!-- <div class="wrapper-weight">
       <div class="icon-weight"><img src="{{asset('/assets/img/icon-weight.svg')}}" alt="" width="20" height="23"/></div>
         <div class="text-weight">{{ $post->size }} Mo</div>
     </div>
@@ -19,11 +19,11 @@
         <div class="text-download">
           <a href="{{asset('storage/posts/' .$post->meta_keywords)}}" download><b>Download</b></a>
       </div>
-    </div>
+    </div> -->
 
     <div class="wrapper-morefrom">
       <div class="text-morefrom">More from .{{ $categorie->slug }}</div>
-        <div class="image-morefrom">
+        <!-- <div class="image-morefrom">
             <a href="{{ route('posts.show', [
                 'post' => $post->id,
                 'slug' => \Illuminate\Support\Str::slug($post->title)
@@ -56,6 +56,6 @@
                   <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
                 </div>
               </a>
-        </div>
+        </div> -->
     </div>
 </div>
