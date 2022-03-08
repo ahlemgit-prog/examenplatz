@@ -11,6 +11,5 @@
         'categories' => \App\Models\Categorie::orderBy('id', 'ASC')->get()
         ])
 			</div>
-
 		</div>
 </div>

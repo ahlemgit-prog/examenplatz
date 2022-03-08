@@ -24,9 +24,6 @@ Route::get('/posts', function () {
 Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
      ->name('homepage');
 
-// Route des pages
-Route::get('/pages', [\App\Http\Controllers\PagesController::class, 'index'])
-     ->name('pages.index');
 
 // Route des posts
 
@@ -53,6 +50,8 @@ Route::get('/ajax/comments/add', [\App\Http\Controllers\CommentsController::clas
 
 
 // Route des catégories
+Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
+     ->name('categories.show');
 
 Route::get('/posts/ai', [\App\Http\Controllers\PostsController::class, 'ai'])
      ->name('posts._ai');
