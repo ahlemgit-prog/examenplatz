@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Categorie;
+use App\Models\Category;
 
 class CategoriesController extends Controller
 {
-  public function show(Categorie $categorie) {
+  public function show(Category $categorie) {
         return view('categories._show', compact('categorie'));
     }
 }
