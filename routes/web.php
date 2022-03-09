@@ -57,7 +57,7 @@ Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesCo
 Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
      ->name('categories._show');
 
-Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
+Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'content'])
     ->name('categories.content');
 
 
