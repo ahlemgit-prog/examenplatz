@@ -24,9 +24,9 @@
     <div class="wrapper-morefrom">
       <div class="text-morefrom">More from .{{ $categorie->slug }}</div>
         <div class="image-morefrom">
-            <a href="{{ route('posts.show', [
-                'post' => $post->id,
-                'slug' => \Illuminate\Support\Str::slug($post->title)
+            <a href="{{ route('categorie._show', [
+                'categorie' => $categorie->id,
+                'slug' => \Illuminate\Support\Str::slug($categorie->name)
               ]) }}">
               <div class="image-morefrom-1">
                 <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
