@@ -28,7 +28,7 @@
         </figure>
 
         {{-- Aside du post --}}
-        @include('posts.main', ['posts' => $post->categories])
+        @include('categories._show', ['categorie' => $post->categorie])
 
         {{-- Comments du post --}}
         @include('comments._index', ['comments' => $post->comments])
