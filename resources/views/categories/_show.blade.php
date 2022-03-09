@@ -20,7 +20,7 @@
                 <img src="{{asset('storage/posts/' . $categorie->posts)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->name }}</dt>
-                  <dd>{{ $categorie->posts }}</dd>
+                  <dd>{{ $categorie->posts->excerpt }}</dd>
                 </dl>
               </a>
                 <div id="wrapper-part-info">
