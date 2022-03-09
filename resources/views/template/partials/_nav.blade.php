@@ -7,7 +7,7 @@
 			</div>
 			<div id="wrapper-bouton-icon">
 				{{-- Categories du post --}}
-				@include('categories._index', ['categories' => \App\Models\Categorie::orderBy('id', 'ASC')->get()])
+				@include('categories._index', ['categories' => \App\Models\Category::orderBy('id', 'ASC')->get()])
 			</div>
 		</div>
 </div>
