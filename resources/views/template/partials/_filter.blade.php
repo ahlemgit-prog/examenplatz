@@ -9,9 +9,10 @@
             <div class="small-logo"></div>
           </div>
 
+          @foreach($categories as $categorie)
           <div id="main-premium-ressource">
-              <div class="premium-ressource"><a href="{{ route('categories._show') }}">Premium resources</a></div>
+              <div class="premium-ressource"><a href="{{ route('categories._show')['categorie' => $categorie->id, 'slug' => Illuminate\Support\Str::slug($categorie->name)] }}">Premium resources</a></div>
           </div>
-
+          @endforeach
       </div>
   </div>
