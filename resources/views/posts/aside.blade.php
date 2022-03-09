@@ -1,9 +1,10 @@
 <div class="wrapper-text-description">
+  @foreach($categories as $categorie)
     <div class="wrapper-file">
         <div class="icon-file"><img src="{{asset('/assets/img/' .$categorie->icon)}}" alt="" width="21" height="21"/></div>
           <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
-
+  @endforeach
     <div class="wrapper-weight">
       <div class="icon-weight"><img src="{{asset('/assets/img/icon-weight.svg')}}" alt="" width="20" height="23"/></div>
         <div class="text-weight">{{ $post->size }} Mo</div>
