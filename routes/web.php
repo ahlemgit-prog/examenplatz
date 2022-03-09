@@ -51,12 +51,6 @@ Route::get('/ajax/comments/add', [\App\Http\Controllers\CommentsController::clas
 
 // Route des catégories
 
-Route::get('/', [\App\Http\Controllers\CategoriesController::class, 'index'])
-     ->name('homepage');
-
-Route::get('/', [\App\Http\Controllers\CategoriesController::class, 'content'])
-    ->name('categories.content');
-
 Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'aside'])
      ->name('categories.aside');
 
