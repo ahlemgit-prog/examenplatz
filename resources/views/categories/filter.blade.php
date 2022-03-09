@@ -1,8 +1,8 @@
-@foreach($categories as $categorie)
+<!-- @foreach($categories as $categorie)
 <div id="main-premium-ressource">
     <div class="premium-ressource"><a href="{{ route('categories._show') }}">Resources</a></div>
 </div>
-@endforeach
+@endforeach -->
 <!-- <div id="main-themes">
     <div class="themes"><a href="{{ route('posts._theme') }}">Latest themes</a></div>
 </div>
