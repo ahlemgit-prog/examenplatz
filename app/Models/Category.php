@@ -10,6 +10,6 @@ class Category extends Model
     use HasFactory;
 
     public function posts () {
-        return $this->belongsToMany(Post::class, 'posts_has_categories');
+        return $this->hasMany(Post::class, 'category_id');
     }
 }
