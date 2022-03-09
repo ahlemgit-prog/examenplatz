@@ -11,7 +11,7 @@ class CategoriesController extends Controller
         return view('categories._show', compact('categorie'));
     }
 
-  public function show(Category $categorie) {
+  public function main(Category $categorie) {
         return view('categories.main', compact('categorie'));
     }
 }
