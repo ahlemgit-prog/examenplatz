@@ -9,7 +9,7 @@
             <div class="small-logo"></div>
           </div>
 
-          <div id="main-premium-ressource">
+          <!-- <div id="main-premium-ressource">
               <div class="premium-ressource"><a href="{{ route('posts._premium') }}">Premium resources</a></div>
           </div>
 
@@ -31,7 +31,7 @@
 
           <div id="main-photo">
               <div class="photo"><a href="{{ route('posts._photo') }}">Free stock photos</a></div>
-          </div>
+          </div> -->
 
       </div>
   </div>
