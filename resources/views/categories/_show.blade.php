@@ -11,26 +11,7 @@
 
     <div id="main-container-image">
 
-      <section class="work">
-        <div class="more">
-          <figure class="white">
-              <a href="{{ route('categories._show', [
-                    'categorie' => $categorie->id,
-                    'slug' => \Illuminate\Support\Str::slug($categorie->name)
-                  ]) }}">
-                <img src="{{asset('storage/posts/')}}" alt="" />
-                <dl>
-                  <dt></dt>
-                  <dd></dd>
-                </dl>
-              </a>
-                <div id="wrapper-part-info">
-                  <div class="part-info-image"><img src="{{asset('assets/img/')}}" alt=""></div>
-                  <div id="part-info">{{ $categorie->posts->title }}</div>
-                </div>
-          </figure>
-        </div>
-      </section>
+          @include('posts._list', ['post' => $categorie->post])
 
       </div>
     </div>
