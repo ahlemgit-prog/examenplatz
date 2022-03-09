@@ -2,8 +2,8 @@
 <div class="wrapper-text-description">
 
     <div class="wrapper-file">
-        <div class="icon-file"><img src="{{asset('storage/posts/' .$categorie->icon)}}" alt="" width="21" height="21"/></div>
-          <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
+        <div class="icon-file"><img src="{{asset('storage/posts/' .$post->meta_keywords)}}" alt="" width="21" height="21"/></div>
+          <div class="text-file">{{ $post->categories->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
     <div class="wrapper-weight">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="wrapper-morefrom">
-      <div class="text-morefrom">More from .{{ $categorie->slug }}</div>
+      <div class="text-morefrom">More from .{{ $post->slug }}</div>
         <div class="image-morefrom">
             <a href="{{ route('posts.show', [
                 'post' => $post->id,
