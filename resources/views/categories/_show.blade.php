@@ -2,7 +2,7 @@
 <div class="wrapper-text-description">
 
     <div class="wrapper-file">
-        <div class="icon-file"><img src="{{asset('storage/posts/' .$post->meta_keywords)}}" alt="" width="21" height="21"/></div>
+        <div class="icon-file"><img src="{{asset('storage/posts/' .$post->meta_description)}}" alt="" width="21" height="21"/></div>
           <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
