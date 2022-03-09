@@ -14,9 +14,9 @@
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('posts.show', [
-                    'post' => $post->id,
-                    'slug' => \Illuminate\Support\Str::slug($post->title)
+              <a href="{{ route('categories._show', [
+                    'categorie' => $categorie->id,
+                    'slug' => \Illuminate\Support\Str::slug($categorie->name)
                   ]) }}">
                 <img src="{{asset('storage/posts/')}}" alt="" />
                 <dl>
@@ -26,7 +26,7 @@
               </a>
                 <div id="wrapper-part-info">
                   <div class="part-info-image"><img src="{{asset('assets/img/')}}" alt=""></div>
-                  <div id="part-info">{{ $categorie->name }}</div>
+                  <div id="part-info">{{ $categorie->posts->title }}</div>
                 </div>
           </figure>
         </div>
