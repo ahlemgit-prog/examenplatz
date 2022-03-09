@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('title')
-    Free Grid
+    Free Grid Themes
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
     <div id="main-container-image">
 
-            
+          @include('posts._list', ['posts' => $posts])
 
       </div>
     </div>
