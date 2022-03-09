@@ -17,10 +17,10 @@
                     'categorie' => $categorie->id,
                     'slug' => \Illuminate\Support\Str::slug($categorie->name)
                   ]) }}">
-                <img src="{{asset('storage/posts/' . $categorie->icon)}}" alt="" />
+                <img src="{{asset('storage/posts/' . $categorie->posts->meta_keywords)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->name }}</dt>
-                  <dd>{{ $categorie->posts }}</dd>
+                  <dd>{{ $categorie->posts->excerpt }}</dd>
                 </dl>
               </a>
                 <div id="wrapper-part-info">
