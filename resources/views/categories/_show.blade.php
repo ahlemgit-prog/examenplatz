@@ -13,7 +13,7 @@
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('categories._show', [
+              <a href="{{ route('categories.aside', [
                     'categorie' => $categorie->id,
                     'slug' => \Illuminate\Support\Str::slug($categorie->name)
                   ]) }}">
