@@ -14,9 +14,9 @@
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('categories._show', [
-                    'categorie' => $categorie->id,
-                    'slug' => \Illuminate\Support\Str::slug($categorie->name)
+              <a href="{{ route('posts.show', [
+                    'post' => $post->id,
+                    'slug' => \Illuminate\Support\Str::slug($post->title)
                   ]) }}">
                 <img src="{{asset('storage/posts/')}}" alt="" />
                 <dl>
