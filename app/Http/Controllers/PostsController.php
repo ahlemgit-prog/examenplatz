@@ -14,6 +14,10 @@ class PostsController extends Controller
     return view('posts.index', compact('posts'));
 }
 
+public function main() {
+  return view('posts.main', compact('posts'));
+}
+
 public function show(Post $post) {
       return view('posts.show', compact('post'));
   }
@@ -36,7 +40,7 @@ public function more(Request $request) {
   public function psd() {
       $posts = Post::whereIn('id', [23, 16, 15, 11, 17, 8, 7])
                    ->orderBy('id', 'asc')
-                   ->get(); 
+                   ->get();
 
       return view('posts._psd', compact('posts'));
   }
