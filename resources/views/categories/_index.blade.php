@@ -12,7 +12,7 @@
   </div>
 @endforeach
 
-<div id="bouton-ai">
+<!-- <div id="bouton-ai">
   <ul>
     <li>
       <a href="{{ route('posts._ai') }}">
@@ -56,4 +56,4 @@
       <a href="{{ route('posts._premium') }}"><img src="{{ asset('/assets/img/icon-premium.svg') }}" alt="premium" title="Premium" height="28" width="28"></div></a>
     </li>
   </ul>
-</div>
+</div> -->
