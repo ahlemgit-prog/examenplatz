@@ -13,10 +13,7 @@
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('categories.main', [
-                    'categorie' => $categorie->id,
-                    'slug' => \Illuminate\Support\Str::slug($categorie->name)
-                  ]) }}">
+              <a href="{{ }}">
                 <img src="{{asset('storage/posts/' . $categorie->icon)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->icon }}</dt>
