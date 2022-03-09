@@ -10,11 +10,9 @@
   <div class="container object">
 
     <div id="main-container-image">
-      @foreach($posts as $post)
 
-          @include('posts._list', ['posts' => $posts])
-          
-      @endforeach
+          @extends('posts._list', ['posts' => $posts])
+
       </div>
     </div>
 </div>
