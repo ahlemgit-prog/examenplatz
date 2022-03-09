@@ -10,6 +10,7 @@
   <div class="container object">
 
     {{ $categorie->posts }}
+    
     </div>
 </div>
 @endsection
