@@ -51,7 +51,7 @@ Route::get('/ajax/comments/add', [\App\Http\Controllers\CommentsController::clas
 
 // Route des catégories
 Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
-     ->name('categories.show');
+     ->name('categories._show');
 
 Route::get('/posts/ai', [\App\Http\Controllers\PostsController::class, 'ai'])
      ->name('posts._ai');
