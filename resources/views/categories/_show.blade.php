@@ -11,7 +11,7 @@
 
     <div id="main-container-image">
 
-          @extends('posts._list', ['posts' => $posts])
+          @extends('posts._list')
 
       </div>
     </div>
