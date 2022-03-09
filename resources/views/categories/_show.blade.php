@@ -11,7 +11,7 @@
 
     <div id="main-container-image">
 
-          @include('posts._list', ['post' => $categorie->post])
+          @include('posts._list', ['posts' => $categorie->posts])
 
       </div>
     </div>
