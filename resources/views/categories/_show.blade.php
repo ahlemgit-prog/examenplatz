@@ -19,8 +19,8 @@
                   ]) }}">
                 <img src="{{asset('storage/posts/' . $categorie->icon)}}" alt="" />
                 <dl>
-                  <dt>{{ $categorie->icon }}</dt>
-                  <dd>{{ $categorie->icon }}</dd>
+                  <dt>{{ $categorie->name }}</dt>
+                  <dd>{{ $categorie->posts }}</dd>
                 </dl>
               </a>
                 <div id="wrapper-part-info">
