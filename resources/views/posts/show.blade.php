@@ -28,7 +28,7 @@
         </figure>
 
         {{-- Aside du post --}}
-        @include('posts.aside')
+        @include('posts.aside', ['post' => $post->aside])
 
         {{-- Comments du post --}}
         @include('comments._index', ['comments' => $post->comments])
