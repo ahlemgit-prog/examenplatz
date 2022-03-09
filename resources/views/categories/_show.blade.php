@@ -13,7 +13,7 @@
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('posts.show'}}">
+              <a href="{{ route('posts.show')}}">
                 <img src="{{asset('storage/posts/' . $categorie->posts)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->name }}</dt>
