@@ -1,8 +1,9 @@
+@foreach( $categories as $categorie)
 <div id="main-premium-ressource">
-    <div class="premium-ressource"><a href="{{ route('posts._premium') }}">Premium resources</a></div>
+    <div class="premium-ressource"><a href="{{ route('categories._show') }}">Premium resources</a></div>
 </div>
-
-<div id="main-themes">
+@endforeach
+<!-- <div id="main-themes">
     <div class="themes"><a href="{{ route('posts._theme') }}">Latest themes</a></div>
 </div>
 
@@ -20,4 +21,4 @@
 
 <div id="main-photo">
     <div class="photo"><a href="{{ route('posts._photo') }}">Free stock photos</a></div>
-</div>
+</div> -->

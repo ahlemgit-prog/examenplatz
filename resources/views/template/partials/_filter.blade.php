@@ -9,8 +9,8 @@
             <div class="small-logo"></div>
           </div>
 
-          {{-- Aside du post --}}
-          @include('categories.filter', ['categorie' => $post->categorie])
+          {{--  --}}
+          @include('categories.filter')
 
       </div>
   </div>
