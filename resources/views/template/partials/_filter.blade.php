@@ -10,7 +10,7 @@
           </div>
 
           <div id="main-premium-ressource">
-              <div class="premium-ressource"><a href="{{ route('categories._show') }}">Premium resources</a></div>
+              <div class="premium-ressource"><a href="{{ route('categories._index') }}">Premium resources</a></div>
           </div>
 
       </div>
