@@ -9,7 +9,7 @@
 
   <div class="container object">
 
-    {{ $categorie->posts}}
+    {{ $categorie->posts }}
     </div>
 </div>
 @endsection
