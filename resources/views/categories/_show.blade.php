@@ -12,7 +12,6 @@
     <div id="main-container-image">
 
       <section class="work">
-        @foreach($categories as $categorie)
         <div class="more">
           <figure class="white">
               <a href="{{ route('categories._show', [
@@ -31,7 +30,6 @@
                 </div>
           </figure>
         </div>
-        @endforeach
       </section>
 
       </div>

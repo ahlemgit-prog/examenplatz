@@ -57,23 +57,6 @@ Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesCo
 Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
      ->name('categories._show');
 
-Route::get('/posts/ai', [\App\Http\Controllers\PostsController::class, 'ai'])
-     ->name('posts._ai');
-
-Route::get('/posts/psd', [\App\Http\Controllers\PostsController::class, 'psd'])
-    ->name('posts._psd');
-
-Route::get('/posts/theme', [\App\Http\Controllers\PostsController::class, 'theme'])
-    ->name('posts._theme');
-
-Route::get('/posts/font', [\App\Http\Controllers\PostsController::class, 'font'])
-    ->name('posts._font');
-
-Route::get('/posts/photo', [\App\Http\Controllers\PostsController::class, 'photo'])
-    ->name('posts._photo');
-
-Route::get('/posts/premium', [\App\Http\Controllers\PostsController::class, 'premium'])
-    ->name('posts._premium');
 
 
 Route::group(['prefix' => 'admin'], function () {
