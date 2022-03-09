@@ -3,7 +3,7 @@
 
     <div class="wrapper-file">
         <div class="icon-file"><img src="{{asset('storage/posts/' .$post->meta_keywords)}}" alt="" width="21" height="21"/></div>
-          <div class="text-file">{{ $post->title }} [{{ count($categorie->posts) }}]</div>
+          <div class="text-file">{{ $categorie->name }} [{{ count($categorie->posts) }}]</div>
     </div>
 
     <div class="wrapper-weight">
