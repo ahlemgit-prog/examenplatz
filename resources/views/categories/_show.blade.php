@@ -15,7 +15,7 @@
               <a href="{{ route('categories.content', [
                     'categorie' => $categorie->id,
                     'slug' => \Illuminate\Support\Str::slug($categorie->name),
-                    'posts' => $categorie->posts->slug,
+                    'posts' => $categorie->posts->id,
                   ]) }}">
                 <img src="{{asset('storage/posts/' . $categorie->posts)}}" alt="" />
                 <dl>
