@@ -63,7 +63,7 @@ Route::get('/categories/{categorie}/{slug}/posts/{posts}', [\App\Http\Controller
 
 
 
-
+// Route du Voyager
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
