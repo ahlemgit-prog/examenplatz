@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('title')
-    Free Grid {{ $categorie->name }}
+    Free Grid {{ $post->title }}
 @endsection
 
 @section('content')
