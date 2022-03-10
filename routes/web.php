@@ -58,7 +58,7 @@ Route::get('/ajax/comments/add', [\App\Http\Controllers\CommentsController::clas
 Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesController::class, 'show'])
      ->name('categories._show');
 
-Route::get('/categories/{categorie}/{slug}/{posts}', [\App\Http\Controllers\CategoriesController::class, 'content'])
+Route::get('/categories/{categorie}/{slug}/posts/{posts}', [\App\Http\Controllers\CategoriesController::class, 'content'])
     ->name('categories.content');
 
 
