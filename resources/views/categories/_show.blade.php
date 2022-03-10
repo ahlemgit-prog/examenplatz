@@ -18,7 +18,7 @@
                     'slug' => \Illuminate\Support\Str::slug($categorie->name),
                     'posts' => $categorie->slug
                   ]) }}">
-                <img src="{{asset('storage/posts/' . $categorie->posts)}}" alt="" />
+                <img src="{{asset('storage/categories/' . $categorie->icon)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->name }}</dt>
                   <dd>{{ $categorie->name }}</dd>
