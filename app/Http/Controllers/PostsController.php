@@ -39,6 +39,6 @@ public function more(Request $request) {
       $posts = Post::orderBy('created_at', 'asc')
                    ->take(12)
                    ->get();
-      return view('posts._recent', compact('posts'));
+      return view('posts._oldies', compact('posts'));
   }
 }

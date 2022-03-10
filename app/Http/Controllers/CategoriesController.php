@@ -15,4 +15,8 @@ class CategoriesController extends Controller
         return view('categories.content', compact('categorie'));
     }
 
+    public function show() {
+      $categorie = Category::orderBy('slug')->get();
+      return view('categories._show', compact('categorie'));
+  }
 }
