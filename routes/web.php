@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\CommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +24,11 @@ Route::get('/posts', function () {
     return view('template.show');
 });
 
-Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
-     ->name('homepage');
-
 
 // Route des posts
+
+Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])
+     ->name('homepage');
 
 Route::get('/posts', [\App\Http\Controllers\PostsController::class, 'index'])
      ->name('posts.index');
