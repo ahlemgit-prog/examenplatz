@@ -4,7 +4,7 @@
   <div id="bouton-ai">
     <ul>
       <li>
-        <a href="{{ route('categories._index', [
+        <a href="{{ route('categories._show', [
         'categorie' => $categorie->id,
         'slug' => Illuminate\Support\Str::slug($categorie->name)
         ]) }} ">
