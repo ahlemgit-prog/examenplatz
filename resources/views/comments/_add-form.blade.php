@@ -2,6 +2,9 @@
   <div class="main-post-send">
     <div id="title-post-send">Add your comment</div>
     <form action="{{ route('ajax.comments.add') }}" method="post" id="contact">
+      <div>
+        <input type="text" name="name" id="name" required>
+      </div>
       <fieldset>
       <textarea id="message" name="message" maxlength="500" placeholder="Votre Message" tabindex="5" cols="30" rows="4"></textarea>
       </fieldset>
