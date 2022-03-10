@@ -26,7 +26,7 @@
               </a>
                 <div id="wrapper-part-info">
                   <div class="part-info-image"><img src="{{asset('assets/img/' . $post->meta_description)}}" alt=""></div>
-                  <div id="part-info">{{ $post->categories->name }}</div>
+                  <div id="part-info">{{ $post->slug }}</div>
                 </div>
             </figure>
             @endforeach
