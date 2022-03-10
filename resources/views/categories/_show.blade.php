@@ -8,7 +8,7 @@
 
 <div id="wrapper-container">
   <div class="container object">
-
+    @foreach ($categories as $categorie)
     <div id="main-container-image">
       <section class="work">
         <div class="more">
@@ -32,6 +32,7 @@
         </div>
       </section>
     </div>
+    @endforeach
   </div>
 </div>
 
