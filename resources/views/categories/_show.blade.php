@@ -6,16 +6,16 @@
 
 @section('content')
 
-<!-- <div id="wrapper-container">
+<div id="wrapper-container">
   <div class="container object">
     <div id="main-container-image">
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('categories.content', [
-                    'categorie' => $categorie->id,
-                    'slug' => \Illuminate\Support\Str::slug($categorie->name),
-                    'posts' => $categorie->slug
+              <a href="{{ route('posts.show', [
+                    'post' => $post->id,
+                    'slug' => \Illuminate\Support\Str::slug($post->slug),
+                    'posts' => $post->slug
                   ]) }}">
                 <img src="{{asset('storage/posts/' . $categorie->image)}}" alt="" />
                 <dl>
@@ -30,15 +30,6 @@
           </figure>
         </div>
       </section>
-    </div>
-  </div>
-</div> -->
-<div id="wrapper-container">
-  <div class="container object">
-    <div id="main-container-image">
-      <div id="list">
-        @include('posts._list', ['posts' => $posts])
-      </div>
     </div>
   </div>
 </div>
