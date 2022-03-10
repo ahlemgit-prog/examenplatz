@@ -1,7 +1,10 @@
 @extends('template.index')
 
 @section('title')
-    Free Grid {{ $categorie->name }}
+    Free Grid
+    @foreach($categories as $categorie)
+    {{ $categorie->name }}
+    @endforeach
 @endsection
 
 @section('content')
