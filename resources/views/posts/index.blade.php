@@ -35,14 +35,14 @@
 
     <script type="text/javascript">
 
-    let offset = 0;
+    let offset = 20;
     $('#more-posts').click(function(e) {
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
                    .find('div:nth-last-of-type(-n+10)');
-          offset = offset + 0;
+          offset = offset + 20;
        });
     });
     </script>
