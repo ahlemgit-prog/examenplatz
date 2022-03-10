@@ -10,7 +10,7 @@
   <div class="container object">
     <div id="main-container-image">
 
-          @include('categories.list')
+          @include('posts._list')
 
     </div>
   </div>
