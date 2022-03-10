@@ -1,6 +1,5 @@
 
 <section class="work">
-  @foreach($categories as $categorie)
   <div class="more">
     <figure class="white">
       <a href="{{ route('categories.content', [
@@ -20,5 +19,4 @@
         </div>
     </figure>
   </div>
-  @endforeach
 </section>
