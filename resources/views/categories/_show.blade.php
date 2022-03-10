@@ -4,4 +4,8 @@
     Free Grid {{ $categorie->name }}
 @endsection
 
-@yield('content')
+@section('content')
+
+  @yield('content')
+  
+@endsection
