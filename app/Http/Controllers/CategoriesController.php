@@ -13,6 +13,6 @@ class CategoriesController extends Controller
 
     public function show() {
       $categorie = Category::orderBy('order')->get();
-      return view('categories._show', compact('categories'));
+      return view('categories._show', compact('categorie'));
   }
 }
