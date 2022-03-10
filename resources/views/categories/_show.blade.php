@@ -6,6 +6,14 @@
 
 @section('content')
 
-  @yield('content')
-  
+<div id="wrapper-container">
+  <div class="container object">
+    <div id="main-container-image">
+
+          @include('categories.list', ['categories' => $categories])
+
+    </div>
+  </div>
+</div>
+
 @endsection
