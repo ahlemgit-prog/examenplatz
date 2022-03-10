@@ -1,35 +1,16 @@
-@extends('template.index')
+<!-- Categories du nav -->
 
-@section('content')
-
-<div id="wrapper-container">
-  <div class="container object">
-    <div id="main-container-image">
-      <div id="list">
-        <section class="work">
-          <div class="more">
-            @foreach($categorie->posts as $post)
-            <figure class="white">
-              <a href="{{ route('posts.show', [
-                    'post' => $post->id,
-                    'slug' => \Illuminate\Support\Str::slug($post->title),
-                  ]) }}">
-                <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" />
-                <dl>
-                  <dt>{{ $post->title }}</dt>
-                  <dd>{{ $post->excerpt }}</dd>
-                </dl>
-              </a>
-                <div id="wrapper-part-info">
-                  <div class="part-info-image"><img src="{{asset('assets/img/' . $post->meta_description)}}" alt=""></div>
-                  <div id="part-info">{{ $post->title }}</div>
-                </div>
-            </figure>
-            @endforeach
-          </div>
-        </section>
-      </div>
-    </div>
+@foreach($categories as $categorie)
+  <div id="bouton-ai">
+    <ul>
+      <li>
+        <a href="{{ route('categories._index', [
+        'categorie' => $categorie->id,
+        'slug' => Illuminate\Support\Str::slug($categorie->name)
+        ]) }} ">
+          <img src=" {{asset('storage/posts/' . $categorie->icon)}}" alt="{{$categorie->name}}" title="{{$categorie->name}}" height="28" width="28">
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
-@endsection
+@endforeach
