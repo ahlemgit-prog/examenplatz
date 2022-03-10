@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 30, 2021 at 12:20 AM
+-- Generation Time: Mar 10, 2022 at 07:42 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -70,20 +70,21 @@ CREATE TABLE `categories` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Illustrator', 'illustrator', '2021-12-25 22:06:49', '2021-12-26 19:09:56'),
-(2, 2, 2, 'Photoshop', 'photoshop', '2021-12-25 22:06:49', '2021-12-26 19:10:15'),
-(3, 3, 3, 'Theme', 'theme', '2021-12-26 19:10:28', '2021-12-26 19:10:28'),
-(4, 4, 4, 'Font', 'font', '2021-12-26 19:10:48', '2021-12-26 19:10:48'),
-(5, 5, 5, 'Photo', 'photo', '2021-12-26 19:11:03', '2021-12-26 19:11:03'),
-(6, 6, 6, 'Prenium', 'prenium', '2021-12-26 19:11:16', '2021-12-26 19:11:16');
+INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`, `icon`) VALUES
+(1, 1, 1, 'Illustrator', 'illustrator', '2021-12-25 22:06:49', '2021-12-26 19:09:56', 'icon-ai.svg'),
+(2, 2, 2, 'Photoshop', 'photoshop', '2021-12-25 22:06:49', '2021-12-26 19:10:15', 'icon-psd.svg'),
+(3, 3, 3, 'Theme', 'theme', '2021-12-26 19:10:28', '2021-12-26 19:10:28', 'icon-themes.svg'),
+(4, 4, 4, 'Font', 'font', '2021-12-26 19:10:48', '2021-12-26 19:10:48', 'icon-font.svg'),
+(5, 5, 5, 'Photo', 'photo', '2021-12-26 19:11:03', '2021-12-26 19:11:03', 'icon-photo.svg'),
+(6, 6, 6, 'Prenium', 'prenium', '2021-12-26 19:11:16', '2021-12-26 19:11:16', 'icon-premium.svg');
 
 -- --------------------------------------------------------
 
@@ -591,71 +592,36 @@ CREATE TABLE `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `page_id` int(10) UNSIGNED NOT NULL
+  `page_id` int(10) UNSIGNED NOT NULL,
+  `post_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `featured`, `created_at`, `updated_at`, `size`, `page_id`) VALUES
-(4, 17, 4, 'Free font', 'Free font', 'Bavro is a minimal free font best suitable for posters and headlines. Designed and released by Marcelo Melo.', '', NULL, 'free-font', 'icon-font.svg', 'post4.png', 'PUBLISHED', 0, '2021-12-25 22:43:35', '2021-12-25 22:43:35', '105', 0),
-(6, 16, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Rijo Abraham', '', NULL, 'wordpress-theme', 'icon-themes.svg', 'post6.png', 'PUBLISHED', 0, '2021-12-26 13:27:01', '2021-12-26 13:27:01', ' 100', 0),
-(7, 15, 2, 'PSD Goodies', 'PSD Goodies', 'A set of high resolution iPhone 6 and Nexus 5 mockups created with smart objects. Free PSD released by Ghani Pradita.', '', NULL, 'psd-goodies', 'icon-psd.svg', 'post7.png', 'PUBLISHED', 0, '2021-12-26 21:37:41', '2021-12-26 21:37:41', '95', 0),
-(8, 14, 2, 'PSD Goodies', 'PSD Goodies', 'A set of 4 free photorealistic Nexus 5 mockups providing smart objects. Free PSD released by Craftwork.', '', NULL, 'psd-goodies-4', 'icon-psd.svg', 'post8.png', 'PUBLISHED', 0, '2021-12-26 21:40:00', '2021-12-26 21:40:00', '90', 0),
-(9, 2, 1, 'Illustrator freebies', 'Illustrator freebies', 'A set of 6 outline beer icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', '', NULL, 'illustrator-freebies-1', 'icon-ai.svg', 'post9.png', 'PUBLISHED', 0, '2021-12-26 21:43:40', '2021-12-26 21:43:40', '85', 0),
-(10, 1, 3, 'Html theme', 'Html theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'html-theme', 'icon-themes.svg', 'post10.png', 'PUBLISHED', 0, '2021-12-26 21:44:31', '2021-12-26 21:44:31', '80', 0),
-(11, 20, 2, 'PSD goodies', 'PSD goodies', 'A set of 9 high-quality Apple Watch mockups created with Photoshop smart objects. Free PSD released by Samuel Medvedowsky.', '', NULL, 'psd-goodies-1', 'icon-psd.png', 'post11.png', 'PUBLISHED', 0, '2021-12-26 21:46:18', '2021-12-26 21:46:18', '75', 0),
-(12, 19, 4, 'Free font', 'Free font', 'Beyno is a free uppercase font with a futuristic feel and look. Designed and released by Fabian Korn.', NULL, NULL, 'free-font-1', 'icon-font.svg', 'post12.png', 'PUBLISHED', 0, '2021-12-26 21:47:31', '2021-12-26 21:47:31', '70', 0),
-(13, 18, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'wordpress-theme-1', 'icon-themes.svg', 'post13.png', 'PUBLISHED', 0, '2021-12-26 21:49:44', '2021-12-26 21:49:44', '10', 0),
-(14, 13, 1, 'Illustrator icons', 'Illustrator icons', 'A set of 16 outline space icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', '', NULL, 'illustrator-icons', 'icon-ai.svg', 'post14.png', 'PUBLISHED', 0, '2021-12-26 21:50:38', '2021-12-26 21:50:38', '15', 0),
-(15, 8, 2, 'PSD icons', 'PSD icons', 'Grap is a set of 9 simple but coloured icons created with Photoshop. Free PSD released by kamran bhatti.', '', NULL, 'psd-icons', 'icon-psd.svg', 'post15.png', 'PUBLISHED', 0, '2021-12-26 21:51:19', '2021-12-26 21:51:19', '20', 0),
-(16, 12, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Macbook Air mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup-3', 'icon-psd.svg', 'post16.png', 'PUBLISHED', 0, '2021-12-26 21:53:33', '2021-12-26 21:53:33', ' 25', 0),
-(17, 7, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Ipad Pro mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup', 'icon-psd.svg', 'post17.png', 'PUBLISHED', 0, '2021-12-26 21:56:13', '2021-12-26 21:56:13', '30', 0),
-(18, 6, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'wordpress-theme-2', 'icon-themes.svg', 'post18.png', 'PUBLISHED', 0, '2021-12-26 21:57:46', '2021-12-26 21:57:46', '35', 0),
-(19, 5, 4, 'Free font', 'Julep Free font', 'Bavro is a minimal free font best suitable for posters and headlines. Designed and released by Marcelo Melo.', '', NULL, 'free-font-2', 'icon-font.svg', 'post19.png', 'PUBLISHED', 0, '2021-12-26 21:58:57', '2021-12-26 21:58:57', '40', 0),
-(20, 11, 6, 'UI design', 'UI design', 'Acess to our largest database of the web about the ui and look into a ton of professionnal tools', '', NULL, 'ui-design-1', 'icon-premium.svg', 'post20.png', 'PUBLISHED', 0, '2021-12-26 21:59:59', '2021-12-26 21:59:59', '45', 0),
-(21, 4, 4, 'Free font', 'REEF Free font', 'REEF is a rounded font free for commercial and personal use. It\'s strength lies in simplicity and construction.', '', NULL, 'free-font-3', 'icon-font.svg', 'post21.png', 'PUBLISHED', 0, '2021-12-26 22:00:50', '2021-12-26 22:00:50', ' 50', 0),
-(22, 3, 3, 'Html theme', 'Html theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'html-theme-1', 'icon-themes.svg', 'post22.png', 'PUBLISHED', 0, '2021-12-26 22:03:06', '2021-12-26 22:03:06', ' 55', 0),
-(23, 10, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Macbook Air mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup-1', 'icon-psd.svg', 'post23.png', 'PUBLISHED', 0, '2021-12-26 22:04:09', '2021-12-26 22:04:09', ' 60', 0),
-(24, 9, 1, 'Illustrator freebies', 'Illustrator freebies', 'A set of 6 outline beer icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', '', NULL, 'illustrator-freebies-2', 'icon-ai.svg', 'post24.png', 'PUBLISHED', 0, '2021-12-26 22:05:07', '2021-12-26 22:05:07', ' 65', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `posts_has_tags`
---
-
-CREATE TABLE `posts_has_tags` (
-  `post_id` int(10) UNSIGNED NOT NULL,
-  `tag_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `posts_has_tags`
---
-
-INSERT INTO `posts_has_tags` (`post_id`, `tag_id`) VALUES
-(9, 1),
-(14, 1),
-(24, 1),
-(7, 2),
-(8, 2),
-(11, 2),
-(15, 2),
-(16, 2),
-(17, 2),
-(23, 2),
-(6, 3),
-(10, 3),
-(13, 3),
-(18, 3),
-(22, 3),
-(4, 4),
-(12, 4),
-(19, 4),
-(21, 4),
-(20, 6);
+INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `featured`, `created_at`, `updated_at`, `size`, `page_id`, `post_image`, `icon`) VALUES
+(4, 17, 4, 'Free font', 'Free font', 'Bavro is a minimal free font best suitable for posters and headlines. Designed and released by Marcelo Melo.', '', NULL, 'free-font', '', '', 'PUBLISHED', 0, '2021-12-25 22:43:35', '2021-12-25 22:43:35', '105', 0, 'post4.png', 'icon-font.svg'),
+(6, 16, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Rijo Abraham', '', NULL, 'wordpress-theme', '', NULL, 'PUBLISHED', 0, '2021-12-26 13:27:01', '2021-12-26 13:27:01', ' 100', 0, 'post6.png', 'icon-themes.svg'),
+(7, 15, 2, 'PSD Goodies', 'PSD Goodies', 'A set of high resolution iPhone 6 and Nexus 5 mockups created with smart objects. Free PSD released by Ghani Pradita.', '', NULL, 'psd-goodies', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:37:41', '2021-12-26 21:37:41', '95', 0, 'post7.png', 'icon-psd.svg'),
+(8, 14, 2, 'PSD Goodies', 'PSD Goodies', 'A set of 4 free photorealistic Nexus 5 mockups providing smart objects. Free PSD released by Craftwork.', '', NULL, 'psd-goodies-4', NULL, '', 'PUBLISHED', 0, '2021-12-26 21:40:00', '2021-12-26 21:40:00', '90', 0, 'post8.png', 'icon-psd.svg'),
+(9, 2, 1, 'Illustrator freebies', 'Illustrator freebies', 'A set of 6 outline beer icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', '', NULL, 'illustrator-freebies-1', NULL, '', 'PUBLISHED', 0, '2021-12-26 21:43:40', '2021-12-26 21:43:40', '85', 0, 'post9.png', 'icon-ai.svg'),
+(10, 1, 3, 'Html theme', 'Html theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'html-theme', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:44:31', '2021-12-26 21:44:31', '80', 0, 'post10.png', 'icon-themes.svg'),
+(11, 20, 2, 'PSD goodies', 'PSD goodies', 'A set of 9 high-quality Apple Watch mockups created with Photoshop smart objects. Free PSD released by Samuel Medvedowsky.', '', NULL, 'psd-goodies-1', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:46:18', '2021-12-26 21:46:18', '75', 0, 'post11.png', 'icon-psd.png'),
+(12, 19, 4, 'Free font', 'Free font', 'Beyno is a free uppercase font with a futuristic feel and look. Designed and released by Fabian Korn.', NULL, NULL, 'free-font-1', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:47:31', '2021-12-26 21:47:31', '70', 0, 'post12.png', 'icon-font.svg'),
+(13, 18, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'wordpress-theme-1', '', NULL, 'PUBLISHED', 0, '2021-12-26 21:49:44', '2021-12-26 21:49:44', '10', 0, 'post13.png', 'icon-themes.svg'),
+(14, 13, 1, 'Illustrator icons', 'Illustrator icons', 'A set of 16 outline space icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', '', NULL, 'illustrator-icons', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:50:38', '2021-12-26 21:50:38', '15', 0, 'post14.png', 'icon-ai.svg'),
+(15, 8, 2, 'PSD icons', 'PSD icons', 'Grap is a set of 9 simple but coloured icons created with Photoshop. Free PSD released by kamran bhatti.', '', NULL, 'psd-icons', '', NULL, 'PUBLISHED', 0, '2021-12-26 21:51:19', '2021-12-26 21:51:19', '20', 0, 'post15.png', 'icon-psd.svg'),
+(16, 12, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Macbook Air mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup-3', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:53:33', '2021-12-26 21:53:33', ' 25', 0, 'post16.png', 'icon-psd.svg'),
+(17, 7, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Ipad Pro mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup', NULL, '', 'PUBLISHED', 0, '2021-12-26 21:56:13', '2021-12-26 21:56:13', '30', 0, 'post17.png', 'icon-psd.svg'),
+(18, 6, 3, 'Wordpress theme', 'Wordpress theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'wordpress-theme-2', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:57:46', '2021-12-26 21:57:46', '35', 0, 'post18.png', 'icon-themes.svg'),
+(19, 5, 4, 'Free font', 'Julep Free font', 'Bavro is a minimal free font best suitable for posters and headlines. Designed and released by Marcelo Melo.', '', NULL, 'free-font-2', NULL, '', 'PUBLISHED', 0, '2021-12-26 21:58:57', '2021-12-26 21:58:57', '40', 0, 'post19.png', 'icon-font.svg'),
+(20, 11, 6, 'UI design', 'UI design', 'Acess to our largest database of the web about the ui and look into a ton of professionnal tools', '', NULL, 'ui-design-1', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 21:59:59', '2021-12-26 21:59:59', '45', 0, 'post20.png', 'icon-premium.svg'),
+(21, 4, 4, 'Free font', 'REEF Free font', 'REEF is a rounded font free for commercial and personal use. It\'s strength lies in simplicity and construction.', '', NULL, 'free-font-3', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 22:00:50', '2021-12-26 22:00:50', ' 50', 0, 'post21.png', 'icon-font.svg'),
+(22, 3, 3, 'Html theme', 'Html theme', 'Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.', '', NULL, 'html-theme-1', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 22:03:06', '2021-12-26 22:03:06', ' 55', 0, 'post22.png', 'icon-themes.svg'),
+(23, 10, 2, 'PSD mockup', 'PSD mockup', 'A very detailed Macbook Air mockup created with Photoshop and providing smart objects. Free PSD released by Barin Cristian.', '', NULL, 'psd-mockup-1', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 22:04:09', '2021-12-26 22:04:09', ' 60', 0, 'post23.png', 'icon-psd.svg'),
+(24, 1, 1, 'Illustrator freebies', 'Illustrator freebies', 'A set of 6 outline beer icons created with Adobe Illustrator. Free Ai designed and released by Justas Galaburda.', NULL, 'posts/January2022/u4R1K01Wf7NiaiGq8LBD.png', 'illustrator-freebies-2', NULL, NULL, 'PUBLISHED', 0, '2021-12-26 22:05:07', '2022-01-11 20:09:00', ' 65', 0, 'post24.png', 'icon-ai.svg');
 
 -- --------------------------------------------------------
 
@@ -711,31 +677,6 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', '', '', 'text', 1, 'Admin');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tags`
---
-
-CREATE TABLE `tags` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `tags`
---
-
-INSERT INTO `tags` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, '#illustrator', '2021-12-28 20:58:00', NULL),
-(2, '#photoshop', '2021-12-28 20:59:48', NULL),
-(3, '#theme', '2021-12-28 20:59:56', NULL),
-(4, '#font', '2021-12-28 21:00:04', NULL),
-(5, '#photo', '2021-12-28 21:00:14', NULL),
-(6, '#prenium', '2021-12-28 21:00:25', NULL);
 
 -- --------------------------------------------------------
 
@@ -938,14 +879,6 @@ ALTER TABLE `posts`
   ADD UNIQUE KEY `posts_slug_unique` (`slug`);
 
 --
--- Indexes for table `posts_has_tags`
---
-ALTER TABLE `posts_has_tags`
-  ADD PRIMARY KEY (`post_id`,`tag_id`),
-  ADD KEY `fk_posts_has_tags_tags1_idx` (`tag_id`),
-  ADD KEY `fk_posts_has_tags_posts1_idx` (`post_id`);
-
---
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
@@ -958,12 +891,6 @@ ALTER TABLE `roles`
 ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `settings_key_unique` (`key`);
-
---
--- Indexes for table `tags`
---
-ALTER TABLE `tags`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `translations`
@@ -1081,12 +1008,6 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `tags`
---
-ALTER TABLE `tags`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `translations`
