@@ -10,4 +10,8 @@ class CategoriesController extends Controller
   public function show(Category $categorie) {
         return view('categories._show', compact('categorie'));
     }
+
+  public function content(Category $categorie) {
+        return view('categories.content', compact('categorie'));
+    }
 }
