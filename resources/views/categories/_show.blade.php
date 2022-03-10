@@ -10,7 +10,7 @@
   <div class="container object">
     <div id="main-container-image">
 
-          @include('categories.list', ['categories' => $categories])
+          @include('categories.list')
 
     </div>
   </div>
