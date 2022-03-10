@@ -58,6 +58,8 @@ Route::get('/categories/{categorie}/{slug}', [\App\Http\Controllers\CategoriesCo
 Route::get('/categories/{categorie}/{slug}/posts/{posts}', [\App\Http\Controllers\CategoriesController::class, 'content'])
     ->name('categories.content');
 
+Route::get('/ajax/categories', [\App\Http\Controllers\CategoriesController::class, 'more'])
+      ->name('ajax.categories.more');
 
 
 // Route du Voyager
