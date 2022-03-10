@@ -6,14 +6,13 @@
 
 @section('content')
 <div id="wrapper-container">
-
   <div class="container object">
 
     <div id="main-container-image">
       <section class="work">
         <div class="more">
           <figure class="white">
-              <a href="{{ route('categories._index', [
+              <a href="{{ route('categories._show', [
                     'categorie' => $categorie->id,
                     'slug' => \Illuminate\Support\Str::slug($categorie->name)
                   ]) }}">
@@ -30,9 +29,8 @@
           </figure>
         </div>
       </section>
-
-      </div>
-
     </div>
+
+  </div>
 </div>
 @endsection
