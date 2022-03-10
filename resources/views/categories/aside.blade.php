@@ -24,8 +24,10 @@
     </div>
 
     <div class="wrapper-morefrom">
-      <div class="text-morefrom">More from .{{ $post->slug }}</div>
+      <div class="text-morefrom">More from .{{ $post->title }}</div>
         <div class="image-morefrom">
+
+          @foreach ($posts as $post)
             <a href="{{ route('posts.show', [
                 'post' => $post->id,
                 'slug' => \Illuminate\Support\Str::slug($post->title)
@@ -34,30 +36,8 @@
                 <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
               </div>
             </a>
-            <a href="{{ route('posts.show', [
-                  'post' => $post->id,
-                  'slug' => \Illuminate\Support\Str::slug($post->title)
-                ]) }}">
-                <div class="image-morefrom-2">
-                  <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
-                </div>
-              </a>
-            <a href="{{ route('posts.show', [
-                  'post' => $post->id,
-                  'slug' => \Illuminate\Support\Str::slug($post->title)
-                ]) }}">
-                <div class="image-morefrom-3">
-                  <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
-                </div>
-              </a>
-            <a href="{{ route('posts.show', [
-                  'post' => $post->id,
-                  'slug' => \Illuminate\Support\Str::slug($post->title)
-                ]) }}">
-                <div class="image-morefrom-4">
-                  <img src="{{asset('storage/posts/' . $post->meta_keywords)}}" alt="" width="430" height="330"/>
-                </div>
-              </a>
+          @endforeach
+
         </div>
     </div>
 </div>
