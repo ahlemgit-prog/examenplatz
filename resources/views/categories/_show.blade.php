@@ -4,9 +4,9 @@
     Free Grid {{ $categorie->name }}
 @endsection
 
-@section('content')
+@yield('content')
 
-<div id="wrapper-container">
+<!-- <div id="wrapper-container">
   <div class="container object">
     <div id="main-container-image">
       <section class="work">
@@ -32,6 +32,4 @@
       </section>
     </div>
   </div>
-</div>
-
-@endsection
+</div> -->
