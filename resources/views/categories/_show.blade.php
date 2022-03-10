@@ -8,7 +8,6 @@
 
 <div id="wrapper-container">
   <div class="container object">
-    @foreach ($categories as $categorie)
     <div id="main-container-image">
       <section class="work">
         <div class="more">
@@ -18,7 +17,7 @@
                     'slug' => \Illuminate\Support\Str::slug($categorie->name),
                     'posts' => $categorie->slug
                   ]) }}">
-                <img src="{{asset('storage/categories/' . $categorie->icon)}}" alt="" />
+                <img src="{{asset('storage/posts/' . $categorie->icon)}}" alt="" />
                 <dl>
                   <dt>{{ $categorie->name }}</dt>
                   <dd>{{ $categorie->name }}</dd>
@@ -32,7 +31,6 @@
         </div>
       </section>
     </div>
-    @endforeach
   </div>
 </div>
 
