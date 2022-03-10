@@ -16,4 +16,6 @@
   </div>
 </div>
 
+$categorie->posts
+
 @endsection
