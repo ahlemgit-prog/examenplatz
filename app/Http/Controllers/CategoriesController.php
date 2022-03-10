@@ -12,9 +12,8 @@ class CategoriesController extends Controller
     }
 
     public function show() {
-      $categories = Category::orderBy('id', 'asc')
-                   ->take(20)
-                   ->get();
+      $categorie = Category::orderBy('order')
+                   ->all();
       return view('categories._show', compact('categories'));
   }
 }
