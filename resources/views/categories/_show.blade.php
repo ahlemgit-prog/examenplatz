@@ -33,5 +33,14 @@
     </div>
   </div>
 </div> -->
+<div id="wrapper-container">
+  <div class="container object">
+    <div id="main-container-image">
+      <div id="list">
+        @include('posts._list', ['posts' => $posts])
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
