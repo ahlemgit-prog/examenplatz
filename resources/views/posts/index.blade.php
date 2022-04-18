@@ -40,7 +40,7 @@
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
-         $('#list').append(rep)
+         $('#ressources').append(rep)
                    .find('div:nth-last-of-type(-n+10)');
           offset = offset + 0;
        });

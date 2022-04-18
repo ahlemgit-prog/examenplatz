@@ -19,11 +19,11 @@ public function show(Post $post) {
   }
 
 public function more(Request $request) {
-      $posts = Post::orderBy('created_at', 'desc')
+      $posts = Post::orderBy('title', 'asc')
                    ->take(10)
                    ->offset($request->offset)
                    ->get();
-      return view('posts._list', compact('posts'));
+      return view('posts._ressources', compact('posts'));
   }
 
 // Les posts des pages
