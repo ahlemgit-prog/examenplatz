@@ -41,7 +41,6 @@
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#ressources').append(rep)
-                   .find('div:nth-last-of-type(-n+5)');
           offset = offset + 5;
        });
     });
