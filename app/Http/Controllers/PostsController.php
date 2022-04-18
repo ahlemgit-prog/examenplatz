@@ -23,7 +23,7 @@ public function more(Request $request) {
                    ->take(5)
                    ->offset($request->offset)
                    ->get();
-      return view('posts._ressources', compact('posts'));
+      return view('posts._list', compact('posts'));
   }
 
 // Les posts des pages

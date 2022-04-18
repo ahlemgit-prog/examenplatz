@@ -8,7 +8,7 @@
 <div id="wrapper-container">
   <div class="container object">
     <div id="main-container-image">
-      <div id="list">
+      <div>
         @include('posts._list', ['posts' => $posts])
       </div>
     </div>
@@ -40,8 +40,7 @@
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
-         $('#ressources').append(rep)
-                   .find('div:nth-last-of-type(-n+5)');
+         $('#list').append(rep)
           offset = offset + 5;
        });
     });

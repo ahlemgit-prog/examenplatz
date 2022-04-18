@@ -1,4 +1,4 @@
-<section class="work">
+<section class="work" id="list">
   @foreach($posts as $post)
   <div class="more">
     <figure class="white">
