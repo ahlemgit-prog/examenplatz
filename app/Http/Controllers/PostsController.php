@@ -19,8 +19,8 @@ public function show(Post $post) {
   }
 
 public function more(Request $request) {
-      $posts = Post::orderBy('title', 'asc')
-                   ->take(10)
+      $posts = Post::orderBy('created_at', 'desc')
+                   ->take(4)
                    ->offset($request->offset)
                    ->get();
       return view('posts._ressources', compact('posts'));
