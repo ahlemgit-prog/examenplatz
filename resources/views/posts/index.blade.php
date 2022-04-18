@@ -35,13 +35,13 @@
 
     <script type="text/javascript">
 
-    let offset = 20;
+    let offset = 5;
     $('#more-posts').click(function(e) {
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#ressources').append(rep)
-                   .find('div:nth-last-of-type(-n+10)');
+                   .find('div:nth-last-of-type(-n+5)');
           offset = offset + 5;
        });
     });
