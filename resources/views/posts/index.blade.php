@@ -33,7 +33,7 @@
 
     <script type="text/javascript">
 
-    let offset = 20;
+    let offset = 4;
     $('#more-posts').click(function(e) {
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
