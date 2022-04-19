@@ -39,6 +39,9 @@
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
+         if(offset == 40) {
+          $('#more-posts').hide();
+         }
           offset = offset + 4;
        });
     });
