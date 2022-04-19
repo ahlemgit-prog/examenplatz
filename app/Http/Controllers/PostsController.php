@@ -19,7 +19,7 @@ public function show(Post $post) {
   }
 
 public function more(Request $request) {
-      $posts = Post::orderBy('title', 'desc')
+      $posts = Post::orderBy('title', 'asc')
                    ->take(5)
                    ->offset($request->offset)
                    ->get();
