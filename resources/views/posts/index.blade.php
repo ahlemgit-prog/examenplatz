@@ -12,9 +12,6 @@
       </div>
     </div>
   </div>
-  <p>
-    Hello to you !
-  </p>
 <!-- MORE POSTS +++ -->
 
 <div id="wrapper-oldnew">
