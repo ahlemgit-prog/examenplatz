@@ -26,7 +26,6 @@ public function more(Request $request) {
       return view('posts._list', compact('posts'));
   }
 
-
 // Les posts des pages
 
   public function recent() {
