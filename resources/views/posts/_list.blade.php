@@ -6,11 +6,11 @@
               'post' => $post->id,
               'slug' => \Illuminate\Support\Str::slug($post->title)
             ]) }}">
-          <img src="{{asset('storage/posts/' . $post->post_image)}}" alt="" />
+          <img src="{{asset('storage/posts/' . $post->post_image)}}" alt="" height="330" width="440"/>
           <dl>
             <dt>{{ $post->title }}</dt>
             <dd>{{ $post->excerpt }}</dd>
-          </dl> 
+          </dl>
         </a>
           <div id="wrapper-part-info">
             <div class="part-info-image"><img src="{{asset('assets/img/' . $post->categories->icon)}}" alt=""></div>
