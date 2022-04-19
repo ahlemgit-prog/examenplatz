@@ -39,7 +39,7 @@
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
-          offset = offset + 5;
+          offset = offset + 0;
        });
     });
     </script>
