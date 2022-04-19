@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<div id="wrapper-container">
   <div class="container object">
     <div id="main-container-image">
       <div>
@@ -13,7 +12,6 @@
       </div>
     </div>
   </div>
-</div>
 <!-- MORE POSTS +++ -->
 
 <div id="wrapper-oldnew">

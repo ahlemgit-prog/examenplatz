@@ -10,7 +10,7 @@
           <dl>
             <dt>{{ $post->title }}</dt>
             <dd>{{ $post->excerpt }}</dd>
-          </dl>
+          </dl> 
         </a>
           <div id="wrapper-part-info">
             <div class="part-info-image"><img src="{{asset('assets/img/' . $post->categories->icon)}}" alt=""></div>
