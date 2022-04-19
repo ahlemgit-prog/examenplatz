@@ -39,10 +39,10 @@
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
-         if(offset == 40) {
-          $('#more-posts').hide();
+         if(offset == 30) {
+          $('#oldnew-more').hide();
          }
-          offset = offset + 4;
+          offset = offset + 10;
        });
     });
     </script>

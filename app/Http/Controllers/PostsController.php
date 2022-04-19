@@ -20,7 +20,7 @@ public function show(Post $post) {
 
 public function more(Request $request) {
       $posts = Post::orderBy('created_at', 'desc')
-                   ->take(4)
+                   ->take(10)
                    ->offset($request->offset)
                    ->get();
       return view('posts._list', compact('posts'));
