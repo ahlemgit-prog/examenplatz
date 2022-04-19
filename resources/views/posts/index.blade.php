@@ -33,15 +33,12 @@
 
     <script type="text/javascript">
 
-    let offset = 4;
+    let offset = 20;
     $('#more-posts').click(function(e) {
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
-         if(rep == 0) {
-          $('#more-posts').hide();
-         }
           offset = offset + 4;
        });
     });
