@@ -27,7 +27,7 @@
 
 
         <div class="image-morefrom">
-          @include('posts._morefrom', ['posts' => $posts])            
+          @include('posts.morefrom', ['posts' => $posts])            
         </div>
     </div>
 </div>
