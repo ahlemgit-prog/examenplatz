@@ -8,7 +8,7 @@ use App\Models\Post;
 class PostsController extends Controller
 {
   public function index() {
-    $posts = Post::orderBy('id', 'asc')
+    $posts = Post::orderBy('created_at', 'desc')
                  ->take(20)
                  ->get();
     return view('posts.index', compact('posts'));
