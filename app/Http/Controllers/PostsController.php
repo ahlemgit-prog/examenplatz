@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
   public function index() {
     $posts = Post::orderBy('created_at', 'desc')
-                 ->take(20)
+                 ->take(12)
                  ->get();
     return view('posts.index', compact('posts'));
 }
