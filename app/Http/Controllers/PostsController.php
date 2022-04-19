@@ -26,6 +26,14 @@ public function more(Request $request) {
       return view('posts._list', compact('posts'));
   }
 
+public function morefrom() {
+  $posts = Post::orderBy(DB::raw('RAND()'))
+               ->take(4)
+               ->get();
+  return view('posts._morefrom', compact('posts'));
+}
+
+
 // Les posts des pages
 
   public function recent() {
