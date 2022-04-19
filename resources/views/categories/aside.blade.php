@@ -24,10 +24,8 @@
 
     <div class="wrapper-morefrom">
       <div class="text-morefrom">More from .{{ $post->title }}</div>
-
-
         <div class="image-morefrom">
-          @include('posts.morefrom', ['posts' => $posts])            
+          @include('posts.morefrom', ['posts' => $posts])
         </div>
     </div>
 </div>
