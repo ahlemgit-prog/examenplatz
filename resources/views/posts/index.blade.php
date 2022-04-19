@@ -39,6 +39,10 @@
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
+         if(rep == 25) {
+          $('#more-posts').hide();
+          $('#list').show();
+         }
           offset = offset + 5;
        });
     });
