@@ -25,7 +25,7 @@
     <div class="wrapper-morefrom">
       <div class="text-morefrom">More from .{{ $post->categories->name }}</div>
         <div class="image-morefrom">
-          @include('posts.morefrom', ['posts' => $post])
+          @include('posts._morefrom', ['posts' => \App\Models\Post::orderBy(DB::raw('RAND()'))->take(4)->get()])
         </div>
     </div>
 </div>
