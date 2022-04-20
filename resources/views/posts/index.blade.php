@@ -33,15 +33,13 @@
 
     <script type="text/javascript">
 
-    let offset = 20;
+    let offset = 0;
     $('#more-posts').click(function(e) {
       e.preventDefault();
       $.get($(this).data('url'), {offset: offset})
        .done(function(rep) {
          $('#list').append(rep)
-         if(rep == 0) {
-          $('#oldnew-more').hide();
-         }
+                   .find('div:nth-last-of-type(-n+10)');
           offset = offset + 10;
        });
     });
